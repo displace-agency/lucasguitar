@@ -3,8 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import TeachingMethod from './pages/TeachingMethod';
-import ForKids from './pages/ForKids';
+import HowITeach from './pages/HowITeach';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -37,8 +36,7 @@ const AppContent = () => {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/method" element={<TeachingMethod />} />
-          <Route path="/for-kids" element={<ForKids />} />
+          <Route path="/how-i-teach" element={<HowITeach />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

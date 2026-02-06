@@ -486,17 +486,23 @@ ${formData.message || "No additional message"}
         }
         .wizard-anim-enter {
           opacity: 0;
-          transform: translateX(${direction === 'forward' ? '20px' : '-20px'});
         }
         .wizard-anim-active {
           opacity: 1;
-          transform: translateX(0);
-          transition: all 300ms ease-out;
+          transition: opacity 200ms ease-out;
         }
         .wizard-anim-exit {
           opacity: 0;
-          transform: translateX(${direction === 'forward' ? '-20px' : '20px'});
-          transition: all 300ms ease-out;
+          transition: opacity 150ms ease-out;
+        }
+        .wizard-card input::placeholder,
+        .wizard-card textarea::placeholder {
+          color: #A69A8E;
+          opacity: 1;
+        }
+        .wizard-card input,
+        .wizard-card textarea {
+          color: #2D2218;
         }
       `}</style>
 
@@ -564,7 +570,7 @@ ${formData.message || "No additional message"}
               </div>
 
               {/* Wizard Content Container */}
-              <div className={`flex flex-col flex-grow transition-opacity duration-300 ${animating ? 'opacity-0 translate-x-[10px]' : 'opacity-100 translate-x-0'}`}>
+              <div className={`flex flex-col flex-grow transition-opacity duration-300 ${animating ? 'opacity-0' : 'opacity-100'}`}>
                 <div className="text-center mb-8">
                   <h2 className="font-serif text-[24px] sm:text-[28px] text-warm-black leading-[1.2] mb-2">
                     {currentStepData.title}

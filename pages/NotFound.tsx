@@ -28,7 +28,7 @@ const NotFound: React.FC = () => {
             Back to Home
           </Button>
         </Link>
-        <Link to="/method" className="w-full sm:w-auto">
+        <Link to="/how-i-teach" className="w-full sm:w-auto">
            <button className="w-full sm:w-auto bg-transparent border-2 border-brown rounded-full px-7 py-[13px] text-brown font-sans text-[13px] font-medium min-h-[44px] hover:bg-brown hover:text-white transition-all duration-200">
              View Lessons
            </button>

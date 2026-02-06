@@ -59,7 +59,7 @@ const TestimonialStrip = () => {
   return (
     <section className="animate-on-scroll w-full bg-warm-surface py-8 px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto text-center">
-        <blockquote className="font-serif text-[20px] italic text-warm-black max-w-[700px] mx-auto leading-[1.4] mb-3">
+        <blockquote className="font-sans text-[16px] text-warm-black max-w-[700px] mx-auto leading-[1.6] mb-3">
           "Worth every euro. Lucas's lessons have transformed my daughter's relationship with music."
         </blockquote>
         <cite className="font-sans text-[14px] text-warm-gray not-italic block">

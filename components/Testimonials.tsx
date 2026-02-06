@@ -32,7 +32,8 @@ const Testimonials: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[clamp(16px,2vw,24px)]">
           {testimonials.map((t, idx) => (
             <div key={idx} className="stagger-child bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.12)] rounded-lg p-8">
-              <p className="font-serif text-[18px] italic leading-[1.4] text-white mb-6">
+              <div className="font-serif text-[48px] text-white/20 leading-none mb-2">"</div>
+              <p className="font-sans text-[16px] font-normal leading-[1.6] text-white mb-6">
                 "{t.quote}"
               </p>
               <div>

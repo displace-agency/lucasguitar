@@ -8,8 +8,7 @@ const Navbar: React.FC = () => {
   const [lang, setLang] = useState<'EN' | 'DE'>('EN');
 
   const navLinks = [
-    { name: 'Teaching Method', path: '/method' },
-    { name: 'For Kids', path: '/for-kids' },
+    { name: 'How I Teach', path: '/how-i-teach' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/#about' },
     { name: 'Contact', path: '/contact' },

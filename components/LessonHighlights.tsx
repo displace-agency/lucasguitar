@@ -8,7 +8,7 @@ interface LessonCardProps {
 }
 
 const LessonCard: React.FC<LessonCardProps> = ({ title, description, image }) => (
-  <Link to="/method" className="stagger-child block group h-full">
+  <Link to="/how-i-teach" className="stagger-child block group h-full">
     <div className="bg-white border border-warm-mid rounded-lg overflow-hidden transition-shadow duration-200 ease-out hover:shadow-offset-md h-full flex flex-col">
       <div className="h-[180px] w-full">
         <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -31,7 +31,7 @@ const LessonHighlights: React.FC = () => {
     },
     {
       title: "Acoustic Guitar",
-      description: "Fingerpicking, strumming, songwriting — the heart of the guitar.",
+      description: "Fingerpicking, strumming, and songwriting — the heart of the guitar.",
       image: "https://pub-4bf88f98ba4d45e5acd8c1b618eb037e.r2.dev/lucas-terhaar/website/guitar-couch-wide-landscape.jpg"
     },
     {

@@ -10,7 +10,7 @@ const KidsHero = () => {
       <div className="animate-on-scroll max-w-site mx-auto grid grid-cols-4 lg:grid-cols-12 gap-[clamp(16px,2vw,24px)] items-center">
         {/* Mobile: Video First */}
         <div className="col-span-4 lg:col-span-5 lg:col-start-8 lg:order-2 order-1 mb-8 lg:mb-0 flex justify-center lg:justify-end">
-          <div className="w-full max-w-[320px] aspect-[9/16] rounded-xl overflow-hidden bg-warm-black shadow-offset-lg relative">
+          <div className="w-full aspect-[16/9] rounded-xl overflow-hidden bg-warm-black shadow-offset-lg relative">
             <video 
               className="w-full h-full object-cover"
               controls
@@ -355,7 +355,8 @@ const ParentTestimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[clamp(16px,2vw,24px)]">
           {testimonials.map((t, idx) => (
             <div key={idx} className="stagger-child bg-white border border-warm-mid rounded-lg p-7">
-              <p className="font-serif text-[18px] italic leading-[1.4] text-warm-black mb-6">
+              <div className="font-serif text-[48px] text-brown/15 leading-none mb-2">"</div>
+              <p className="font-sans text-[16px] font-normal leading-[1.6] text-warm-black mb-6">
                 "{t.quote}"
               </p>
               <div>

@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
                 Navigate
               </h4>
               <ul className="space-y-2">
-                {['Home', 'Teaching Method', 'For Kids', 'Pricing', 'Contact'].map((item) => (
+                {['Home', 'How I Teach', 'Pricing', 'Contact'].map((item) => (
                   <li key={item}>
                     <Link 
-                      to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} 
+                      to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`} 
                       className="font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
                     >
                       {item}
@@ -48,9 +48,8 @@ const Footer: React.FC = () => {
                 Learn More
               </h4>
               <ul className="space-y-2">
-                <li><Link to="/#about" className="font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">About Lucas</Link></li>
+                <li><Link to="/#about" className="font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">About</Link></li>
                 <li><Link to="/#testimonials" className="font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">Testimonials</Link></li>
-                <li><Link to="/faq" className="font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">FAQ</Link></li>
               </ul>
             </div>
 
@@ -61,12 +60,22 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">
+                  <a 
+                    href="https://www.instagram.com/lucasterhaar_guitar/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
+                  >
                     <Instagram size={18} strokeWidth={1.5} /> Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">
+                  <a 
+                    href="https://www.youtube.com/@LucasTerhaar" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
+                  >
                     <Youtube size={18} strokeWidth={1.5} /> YouTube
                   </a>
                 </li>
@@ -74,6 +83,16 @@ const Footer: React.FC = () => {
                   <a href="mailto:hello@lucasterhaar.com" className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">
                     <Mail size={18} strokeWidth={1.5} /> Email
                   </a>
+                </li>
+                <li>
+                   <a 
+                    href="https://wa.me/491627362969" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
+                   >
+                     <span className="text-[16px] leading-none">💬</span> WhatsApp
+                   </a>
                 </li>
               </ul>
             </div>
@@ -101,10 +120,10 @@ const Footer: React.FC = () => {
                   Navigate
                 </h4>
                 <ul className="space-y-1">
-                  {['Home', 'Teaching Method', 'For Kids', 'Pricing', 'Contact'].map((item) => (
+                  {['Home', 'How I Teach', 'Pricing', 'Contact'].map((item) => (
                     <li key={item}>
                       <Link 
-                        to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} 
+                        to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`} 
                         className="font-sans text-[14px] text-warm-black leading-[2.2]"
                       >
                         {item}
@@ -118,9 +137,22 @@ const Footer: React.FC = () => {
                   Connect
                 </h4>
                 <ul className="space-y-3">
-                  <li><a href="#" className="flex items-center gap-2 font-sans text-[14px] text-warm-black"><Instagram size={18} /> Instagram</a></li>
-                  <li><a href="#" className="flex items-center gap-2 font-sans text-[14px] text-warm-black"><Youtube size={18} /> YouTube</a></li>
+                  <li>
+                    <a href="https://www.instagram.com/lucasterhaar_guitar/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black">
+                      <Instagram size={18} /> Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/@LucasTerhaar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black">
+                      <Youtube size={18} /> YouTube
+                    </a>
+                  </li>
                   <li><a href="mailto:hello@lucasterhaar.com" className="flex items-center gap-2 font-sans text-[14px] text-warm-black"><Mail size={18} /> Email</a></li>
+                  <li>
+                    <a href="https://wa.me/491627362969" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black">
+                      <span className="text-[16px] leading-none">💬</span> WhatsApp
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -131,9 +163,8 @@ const Footer: React.FC = () => {
                 Learn More
               </h4>
               <ul className="space-y-1">
-                <li><Link to="/#about" className="font-sans text-[14px] text-warm-black leading-[2.2]">About Lucas</Link></li>
+                <li><Link to="/#about" className="font-sans text-[14px] text-warm-black leading-[2.2]">About</Link></li>
                 <li><Link to="/#testimonials" className="font-sans text-[14px] text-warm-black leading-[2.2]">Testimonials</Link></li>
-                <li><Link to="/faq" className="font-sans text-[14px] text-warm-black leading-[2.2]">FAQ</Link></li>
               </ul>
             </div>
           </div>

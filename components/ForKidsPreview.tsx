@@ -38,7 +38,7 @@ const ForKidsPreview: React.FC = () => {
           </ul>
 
           <div className="flex flex-wrap gap-4 items-center">
-            <Link to="/for-kids">
+            <Link to="/how-i-teach">
               <Button variant="primary">Learn More About Kids Lessons</Button>
             </Link>
             <Link to="/pricing">
