@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Terhaar Guitar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brown: {
+                DEFAULT: '#8A3819',
+                hover: '#6F2D14'
+              },
+              amber: '#E8A535',
+              teal: '#3A7D8C',
+              coral: '#E86F3A',
+              green: '#5B8F6E',
+              warm: {
+                black: '#2D2218',
+                gray: '#7A6E62',
+                light: '#A69A8E',
+                mid: '#E8DFD3',
+                surface: '#F4EDE4',
+                bg: '#FBF8F4',
+                white: '#FBF8F4'
+              }
+            },
+            fontFamily: {
+              serif: ['"DM Serif Display"', 'serif'],
+              sans: ['"DM Sans"', 'sans-serif'],
+            },
+            boxShadow: {
+              'offset-sm': '3px 3px 6px rgba(0,0,0,0.08)',
+              'offset-md': '6px 6px 9px rgba(0,0,0,0.12)',
+              'offset-lg': '12px 12px 24px rgba(0,0,0,0.15)',
+            },
+            borderRadius: {
+              'lg': '12px',
+              'md': '8px',
+              'sm': '4px',
+            },
+            spacing: {
+              'nav': '72px',
+            },
+            maxWidth: {
+              'site': '1400px',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar to match aesthetic if needed, keeping it simple for now */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-warm-bg text-warm-black font-sans antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
