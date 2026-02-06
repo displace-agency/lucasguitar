@@ -7,7 +7,7 @@ import { Target, Star, Lightbulb, Infinity, Check, ChevronDown, ChevronUp } from
 const KidsHero = () => {
   return (
     <section className="w-full bg-coral pt-[calc(72px+4rem)] pb-[3rem] lg:pt-[calc(72px+7rem)] lg:pb-[5rem] px-4 lg:px-[clamp(24px,4vw,80px)]">
-      <div className="max-w-site mx-auto grid grid-cols-4 lg:grid-cols-12 gap-[clamp(16px,2vw,24px)] items-center">
+      <div className="animate-on-scroll max-w-site mx-auto grid grid-cols-4 lg:grid-cols-12 gap-[clamp(16px,2vw,24px)] items-center">
         {/* Mobile: Video First */}
         <div className="col-span-4 lg:col-span-5 lg:col-start-8 lg:order-2 order-1 mb-8 lg:mb-0 flex justify-center lg:justify-end">
           <div className="w-full max-w-[320px] aspect-[9/16] rounded-xl overflow-hidden bg-warm-black shadow-offset-lg relative">
@@ -74,7 +74,7 @@ const WhyMusic = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -90,7 +90,7 @@ const WhyMusic = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(16px,2vw,24px)]">
           {benefits.map((b, idx) => (
-            <div key={idx} className="bg-white border border-warm-mid rounded-lg p-7">
+            <div key={idx} className="stagger-child bg-white border border-warm-mid rounded-lg p-7">
               <div 
                 className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
                 style={{ backgroundColor: `${b.color}1F` }}
@@ -114,7 +114,7 @@ const WhyMusic = () => {
 // Section 3: Age Groups
 const AgeGroups = () => {
   return (
-    <section className="w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -127,7 +127,7 @@ const AgeGroups = () => {
 
         <div className="space-y-6">
           {/* Group 1 */}
-          <div className="bg-white rounded-lg p-8 border-l-[4px] border-coral max-w-[1400px] mx-auto">
+          <div className="stagger-child bg-white rounded-lg p-8 border-l-[4px] border-coral max-w-[1400px] mx-auto">
             <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
               <div className="md:w-1/3">
                 <span className="inline-block bg-[#E86F3A1F] text-coral font-sans text-[11px] font-bold uppercase tracking-wider py-1 px-3 rounded-full mb-3">
@@ -157,7 +157,7 @@ const AgeGroups = () => {
           </div>
 
           {/* Group 2 */}
-          <div className="bg-white rounded-lg p-8 border-l-[4px] border-amber max-w-[1400px] mx-auto">
+          <div className="stagger-child bg-white rounded-lg p-8 border-l-[4px] border-amber max-w-[1400px] mx-auto">
             <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
               <div className="md:w-1/3">
                 <span className="inline-block bg-[#E8A5351F] text-amber font-sans text-[11px] font-bold uppercase tracking-wider py-1 px-3 rounded-full mb-3">
@@ -187,7 +187,7 @@ const AgeGroups = () => {
           </div>
 
           {/* Group 3 */}
-          <div className="bg-white rounded-lg p-8 border-l-[4px] border-teal max-w-[1400px] mx-auto">
+          <div className="stagger-child bg-white rounded-lg p-8 border-l-[4px] border-teal max-w-[1400px] mx-auto">
              <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-12">
               <div className="md:w-1/3">
                 <span className="inline-block bg-[#3A7D8C1F] text-teal font-sans text-[11px] font-bold uppercase tracking-wider py-1 px-3 rounded-full mb-3">
@@ -233,7 +233,7 @@ const Curriculum = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -246,7 +246,7 @@ const Curriculum = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[clamp(16px,2vw,24px)]">
           {skills.map((skill, idx) => (
-            <div key={idx} className="p-6">
+            <div key={idx} className="stagger-child p-6">
               <h3 className="font-sans text-[14px] font-bold text-warm-black mb-2">
                 {skill.title}
               </h3>
@@ -271,7 +271,7 @@ const FirstLesson = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -292,7 +292,7 @@ const FirstLesson = () => {
             <div className="absolute top-[18px] left-[12%] right-[12%] h-[1px] bg-warm-mid -z-1" />
             
             {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center bg-warm-surface z-10 px-2">
+              <div key={idx} className="stagger-child flex flex-col items-center text-center bg-warm-surface z-10 px-2">
                 <div className="w-9 h-9 rounded-full bg-coral text-white font-sans text-[14px] font-bold flex items-center justify-center mb-4 shadow-sm">
                   {idx + 1}
                 </div>
@@ -305,7 +305,7 @@ const FirstLesson = () => {
           {/* Mobile Steps */}
           <div className="sm:hidden flex flex-col gap-0 border-l-2 border-warm-mid ml-4">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-start pl-6 pb-8 relative last:pb-0">
+              <div key={idx} className="stagger-child flex flex-col items-start pl-6 pb-8 relative last:pb-0">
                  <div className="absolute -left-[19px] top-0 w-9 h-9 rounded-full bg-coral text-white font-sans text-[14px] font-bold flex items-center justify-center border-4 border-warm-surface">
                   {idx + 1}
                 </div>
@@ -341,7 +341,7 @@ const ParentTestimonials = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -354,7 +354,7 @@ const ParentTestimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[clamp(16px,2vw,24px)]">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-white border border-warm-mid rounded-lg p-7">
+            <div key={idx} className="stagger-child bg-white border border-warm-mid rounded-lg p-7">
               <p className="font-serif text-[18px] italic leading-[1.4] text-warm-black mb-6">
                 "{t.quote}"
               </p>
@@ -391,7 +391,7 @@ const PracticalInfo = () => {
   };
 
   return (
-    <section className="w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -404,7 +404,7 @@ const PracticalInfo = () => {
 
         <div className="max-w-[1400px] mx-auto">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="bg-white border border-warm-mid rounded-lg mb-2 overflow-hidden">
+            <div key={idx} className="stagger-child bg-white border border-warm-mid rounded-lg mb-2 overflow-hidden">
               <button 
                 onClick={() => toggle(idx)}
                 className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none"
@@ -436,7 +436,7 @@ const PracticalInfo = () => {
 // Section 8: CTA
 const PageCTA = () => {
   return (
-    <section className="w-full bg-coral py-[clamp(3rem,8vw,5rem)] px-4 lg:px-[clamp(24px,4vw,80px)] text-center">
+    <section className="animate-on-scroll w-full bg-coral py-[clamp(3rem,8vw,5rem)] px-4 lg:px-[clamp(24px,4vw,80px)] text-center">
        <div className="max-w-[700px] mx-auto">
          <h2 className="font-serif text-[clamp(1.5rem,1.5rem+1.5vw,2.5rem)] leading-[1.2] text-white mb-4">
            Let's Find the Right Path for Your Child

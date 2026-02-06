@@ -7,7 +7,7 @@ import { Compass, Music, Trophy, Play, Check } from 'lucide-react';
 const MethodHero = () => {
   return (
     <section className="w-full bg-brown pt-[calc(72px+4rem)] pb-[3rem] lg:pt-[calc(72px+7rem)] lg:pb-[5rem] px-4 lg:px-[clamp(24px,4vw,80px)]">
-      <div className="max-w-site mx-auto grid grid-cols-4 lg:grid-cols-12 gap-[clamp(16px,2vw,24px)] items-center">
+      <div className="animate-on-scroll max-w-site mx-auto grid grid-cols-4 lg:grid-cols-12 gap-[clamp(16px,2vw,24px)] items-center">
         {/* Mobile: Image First */}
         <div className="col-span-4 lg:col-span-5 lg:col-start-8 lg:order-2 order-1 mb-6 lg:mb-0">
           <img 
@@ -67,7 +67,7 @@ const Philosophy = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -80,7 +80,7 @@ const Philosophy = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(16px,2vw,24px)]">
           {pillars.map((pillar, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center p-6 lg:p-8">
+            <div key={idx} className="stagger-child flex flex-col items-center text-center p-6 lg:p-8">
               <div 
                 className="w-12 h-12 rounded-full flex items-center justify-center mb-6"
                 style={{ backgroundColor: `${pillar.color}1F` }} // 12% opacity hex approximation
@@ -131,7 +131,7 @@ const AgeGroups = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -144,7 +144,7 @@ const AgeGroups = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(16px,2vw,24px)]">
           {groups.map((group, idx) => (
-            <div key={idx} className="bg-white rounded-lg p-7 border border-warm-mid h-full flex flex-col items-start">
+            <div key={idx} className="stagger-child bg-white rounded-lg p-7 border border-warm-mid h-full flex flex-col items-start">
               <span 
                 className="font-sans text-[11px] font-bold uppercase tracking-wider py-1 px-3 rounded-full mb-4"
                 style={{ 
@@ -194,7 +194,7 @@ const Instruments = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -207,7 +207,7 @@ const Instruments = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(16px,2vw,24px)]">
           {instruments.map((inst, idx) => (
-            <div key={idx} className="bg-white border border-warm-mid rounded-lg overflow-hidden group hover:shadow-offset-md transition-shadow duration-200">
+            <div key={idx} className="stagger-child bg-white border border-warm-mid rounded-lg overflow-hidden group hover:shadow-offset-md transition-shadow duration-200">
               <div className="h-[200px] w-full overflow-hidden">
                  <img src={inst.img} alt={inst.title} className="w-full h-full object-cover" />
               </div>
@@ -231,7 +231,7 @@ const Genres = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-black py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-black py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto text-center">
         <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-amber mb-3 block">
           Genres
@@ -277,7 +277,7 @@ const LessonStructure = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="text-center mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -295,7 +295,7 @@ const LessonStructure = () => {
             <div className="absolute top-[20px] left-[10%] right-[10%] h-[1px] bg-warm-mid -z-1" />
             
             {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center bg-warm-bg z-10">
+              <div key={idx} className="stagger-child flex flex-col items-center text-center bg-warm-bg z-10">
                 <div className="w-10 h-10 rounded-full bg-brown text-white font-sans text-[14px] font-bold flex items-center justify-center mb-3">
                   {idx + 1}
                 </div>
@@ -309,7 +309,7 @@ const LessonStructure = () => {
           {/* Mobile Vertical List */}
           <div className="sm:hidden flex flex-col gap-0 border-l-2 border-warm-mid ml-4">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-start pl-6 pb-8 relative last:pb-0">
+              <div key={idx} className="stagger-child flex flex-col items-start pl-6 pb-8 relative last:pb-0">
                  <div className="absolute -left-[21px] top-0 w-10 h-10 rounded-full bg-brown text-white font-sans text-[14px] font-bold flex items-center justify-center border-4 border-warm-bg">
                   {idx + 1}
                 </div>
@@ -334,7 +334,7 @@ const Results = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <div className="mb-12">
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">
@@ -347,7 +347,7 @@ const Results = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[clamp(16px,2vw,24px)]">
           {results.map((res, idx) => (
-             <div key={idx} className="bg-white rounded-lg p-8 border border-warm-mid">
+             <div key={idx} className="stagger-child bg-white rounded-lg p-8 border border-warm-mid">
                 <span className="font-serif text-[clamp(1.5rem,2vw,2.5rem)] text-brown block mb-2 leading-none">
                   {res.metric}
                 </span>
@@ -368,7 +368,7 @@ const Results = () => {
 // Section 8: CTA
 const PageCTA = () => {
   return (
-    <section className="w-full bg-brown py-[clamp(3rem,8vw,5rem)] px-4 lg:px-[clamp(24px,4vw,80px)] text-center">
+    <section className="animate-on-scroll w-full bg-brown py-[clamp(3rem,8vw,5rem)] px-4 lg:px-[clamp(24px,4vw,80px)] text-center">
        <div className="max-w-[700px] mx-auto">
          <h2 className="font-serif text-[clamp(1.5rem,1.5rem+1.5vw,2.5rem)] leading-[1.2] text-white mb-4">
            Let's Discuss Your Musical Goals

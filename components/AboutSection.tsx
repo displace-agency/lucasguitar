@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section id="about" className="animate-on-scroll w-full bg-warm-bg py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto grid grid-cols-1 md:grid-cols-12 gap-[clamp(16px,2vw,24px)] items-center">
         {/* Image - 5 cols desktop, full mobile */}
         <div className="md:col-span-5 w-full order-1 md:order-1 mb-6 md:mb-0">

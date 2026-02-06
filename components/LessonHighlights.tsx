@@ -8,7 +8,7 @@ interface LessonCardProps {
 }
 
 const LessonCard: React.FC<LessonCardProps> = ({ title, description, image }) => (
-  <Link to="/method" className="block group h-full">
+  <Link to="/method" className="stagger-child block group h-full">
     <div className="bg-white border border-warm-mid rounded-lg overflow-hidden transition-shadow duration-200 ease-out hover:shadow-offset-md h-full flex flex-col">
       <div className="h-[180px] w-full">
         <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -47,7 +47,7 @@ const LessonHighlights: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section className="animate-on-scroll w-full bg-warm-surface py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <p className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3">
           What You'll Learn

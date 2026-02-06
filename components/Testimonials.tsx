@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section id="testimonials" className="w-full bg-brown py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
+    <section id="testimonials" className="animate-on-scroll w-full bg-brown py-[clamp(3rem,8vw,6rem)] px-4 lg:px-[clamp(24px,4vw,80px)]">
       <div className="max-w-site mx-auto">
         <p className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-amber mb-3">
           What Students & Parents Say
@@ -31,7 +31,7 @@ const Testimonials: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[clamp(16px,2vw,24px)]">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.12)] rounded-lg p-8">
+            <div key={idx} className="stagger-child bg-[rgba(255,255,255,0.08)] border border-[rgba(255,255,255,0.12)] rounded-lg p-8">
               <p className="font-serif text-[18px] italic leading-[1.4] text-white mb-6">
                 "{t.quote}"
               </p>
