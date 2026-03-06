@@ -24,7 +24,7 @@
   "about": {
     "label": "Dein Lehrer",
     "heading": "Ich glaube, jeder Schüler hat eine eigene musikalische Stimme",
-    "p1": "Hi, ich bin Lucas — Gitarrenlehrer in Berlin mit über 8 Jahren Erfahrung mit Schülern jeden Alters. Ich habe als Kind angefangen Gitarre zu spielen, mich in Jazz und Improvisation verliebt und schließlich meine Leidenschaft zum Beruf gemacht, um anderen zu helfen, ihre eigene zu entdecken.",
+    "p1": "Hi, ich bin Lucas — Gitarrenlehrer in Berlin mit über 8 Jahren Erfahrung mit Schülern jeden Alters. Die Gitarre hat mich schon sehr früh fasziniert, aber ernsthaft angefangen zu spielen und zu üben habe ich erst als Teenager. Nach der Schule habe ich Musikpädagogik und Jazzgitarre studiert, mit vielen verschiedenen Bands und Musikern gespielt und aufgenommen, und schließlich meine Leidenschaft zum Beruf gemacht, um anderen dabei zu helfen, ihre eigene zu entdecken.",
     "p2": "Ob dein Kind zum ersten Mal eine Gitarre in die Hand nimmt oder du als Erwachsener endlich das Lied lernen willst, das du schon immer spielen wolltest — ich gestalte den Unterricht rund um das, was dich begeistert. Keine starren Lehrbücher. Keine langweiligen Übungen. Einfach echte Musik, echte Fortschritte und jede Menge Spaß.",
     "cta": "Kostenloses Gespräch"
   },
@@ -161,7 +161,7 @@
         { "q": "Wie lang sind die Stunden?", "a": "Stunden sind in 30, 45 und 60 Minuten verfügbar. Ich empfehle 30 oder 45 Minuten für die meisten Schüler. 60-Minuten-Stunden sind auf Anfrage ebenfalls möglich." },
         { "q": "Braucht mein Kind eine eigene Gitarre?", "a": "Nicht für die erste Stunde — ich habe Instrumente da. Für regelmäßigen Unterricht empfehle ich, eine Gitarre anzuschaffen. Ich helfe gerne bei der Auswahl der richtigen Größe." },
         { "q": "Wie viel Übung wird erwartet?", "a": "5-8 Jahre: Einfach zum Spaß spielen! 9-12 Jahre: 10-15 Minuten täglich. 13-18 Jahre: 20-30 Minuten täglich. Erwachsene: was in den Zeitplan passt. Üben soll sich wie Spielen anfühlen, nicht wie Pflicht." },
-        { "q": "Wie ist die Stornierungsregelung?", "a": "72+ Stunden vor der Stunde: kostenlose Stornierung. Weniger als 48 Stunden: 50% Gebühr. Weniger als 24 Stunden: volle Gebühr." },
+        { "q": "Wie ist die Stornierungsregelung?", "a": "Das Leben ist manchmal unplanbar — das verstehe ich. Sagst du mehr als 3 Tage vorher ab, entstehen keine Kosten. Innerhalb von 2 Tagen gilt eine Gebühr von 50%. Innerhalb von 24 Stunden wird die volle Stunde berechnet." },
         { "q": "Können Eltern beim Unterricht dabei sein?", "a": "Für Kinder im Alter von 5-8 Jahren können Eltern die ersten 3 Stunden dabei sein. Danach nimmt das Kind alleine teil. Wir finden heraus, was am besten funktioniert." }
       ]
     },
@@ -193,14 +193,6 @@
     "tables": {
       "label": "Unterrichtspakete",
       "heading": "Einfache, transparente Preise",
-      "trial": {
-        "title": "Probestunde",
-        "price": "Kostenlos",
-        "duration": "30 Minuten",
-        "desc": "Ein unverbindliches Kennenlernen, um zu sehen, ob wir zusammenpassen.",
-        "features": ["Lucas kennenlernen", "Erste Übungen ausprobieren", "Deine Ziele besprechen", "Keine Verpflichtung"],
-        "cta": "Probestunde buchen"
-      },
       "single": {
         "badge": "Am beliebtesten",
         "title": "Einzelstunde",
@@ -210,18 +202,26 @@
           { "amount": "50€", "per": "/ 60 Min" }
         ],
         "desc": "Flexible Einzelstunden mit voller Individualisierung.",
-        "features": ["Individueller Unterrichtsplan", "Technik + Theorie + Songs", "Übungsanleitung inklusive", "Flexible Terminplanung"],
+        "features": ["Technik + Theorie + Songs", "Übungsanleitung inklusive", "Flexible Terminplanung"],
         "cta": "Kostenloses Gespräch"
       },
-      "package": {
+      "pack12": {
         "badge": "Bestes Angebot",
-        "title": "10er-Paket",
-        "price": "10-15% sparen",
-        "duration": "45 oder 60 Min Stunden",
+        "title": "12er-Paket",
+        "price": "10% sparen",
+        "duration": "30, 45 oder 60 Min Stunden",
         "desc": "Setze auf Fortschritt mit einem vergünstigten Paket.",
-        "features": ["Alles aus der Einzelstunde", "10-15% Ersparnis", "Bevorzugte Terminplanung", "Fortschrittsverfolgung"],
+        "features": ["Alles aus der Einzelstunde", "10% Ersparnis", "Fester wöchentlicher Termin", "Individueller Unterrichtsplan"],
         "cta": "Kostenloses Gespräch",
-        "savings": "Spare bis zu 80€"
+        "validity": "Gültig für 4 Monate"
+      },
+      "trial": {
+        "title": "Probestunde",
+        "price": "Kostenlos",
+        "duration": "30 Minuten",
+        "desc": "Ein unverbindliches Kennenlernen, um zu sehen, ob wir zusammenpassen.",
+        "features": ["Lucas kennenlernen", "Erste Übungen ausprobieren", "Deine Ziele besprechen", "Keine Verpflichtung"],
+        "cta": "Probestunde buchen"
       }
     },
     "comparison": {
@@ -244,8 +244,8 @@
       "items": [
         { "q": "Welche Zahlungsmethoden akzeptierst du?", "a": "Banküberweisung, PayPal und Bargeld. Die Zahlung erfolgt vor jeder Stunde oder zu Beginn eines Pakets." },
         { "q": "Kann ich zwischen 45 und 60 Minuten wechseln?", "a": "Natürlich. Du kannst die Dauer bei jeder Buchung wählen. Viele Schüler starten mit 45 und wechseln zu 60, wenn sie mehr reinkommen." },
-        { "q": "Was passiert, wenn ich absagen muss?", "a": "72+ Stunden vor der Stunde: kostenlose Stornierung. Weniger als 48 Stunden: 50% Gebühr. Weniger als 24 Stunden: volle Gebühr." },
-        { "q": "Laufen Pakete ab?", "a": "10er-Pakete sind 4 Monate ab Kauf gültig. Das gibt dir genug Flexibilität und erhält gleichzeitig den Schwung." },
+        { "q": "Was passiert, wenn ich absagen muss?", "a": "Das Leben ist manchmal unplanbar — das verstehe ich. Sagst du mehr als 3 Tage vorher ab, entstehen keine Kosten. Innerhalb von 2 Tagen gilt eine Gebühr von 50%. Innerhalb von 24 Stunden wird die volle Stunde berechnet." },
+        { "q": "Laufen Pakete ab?", "a": "12er-Pakete sind 4 Monate ab Kauf gültig. Das gibt dir genug Flexibilität und erhält gleichzeitig den Schwung." },
         { "q": "Ist die Probestunde wirklich kostenlos?", "a": "Ja! Es ist ein kostenloses, unverbindliches Kennenlerngespräch. Wir sprechen über deine Ziele und schauen, ob wir zusammenpassen." },
         { "q": "Gibt es Geschwisterrabatt?", "a": "Ja — wenn zwei oder mehr Geschwister Unterricht nehmen, biete ich 10% Familienrabatt auf alle Stunden." }
       ]
@@ -298,7 +298,7 @@
       "step5": {
         "title": "Welche Musik möchtest du spielen?",
         "subtitle": "Wähle deine Favoriten",
-        "genres": ["Rock", "Pop", "Blues", "Jazz", "Funk", "R&B", "Classical", "Fingerstyle", "Gypsy Jazz", "Improvisation", "Songwriting", "Noch unsicher"]
+        "genres": ["Rock", "Pop", "Blues", "Jazz", "Funk", "R&B", "Classical", "Fingerstyle", "Improvisation", "Songwriting", "Noch unsicher"]
       },
       "step6": {
         "title": "Fast geschafft! Noch ein paar Details.",
@@ -444,7 +444,7 @@
         { "q": "Wie lang sind die Stunden?", "a": "Stunden sind in 30, 45 und 60 Minuten verfügbar. Ich empfehle 30 oder 45 Minuten für die meisten Schüler. 60-Minuten-Stunden sind auf Anfrage ebenfalls möglich." },
         { "q": "Braucht mein Kind eine eigene Gitarre?", "a": "Nicht für die erste Stunde — ich habe Instrumente da. Für regelmäßigen Unterricht empfehle ich, eine Gitarre anzuschaffen. Ich helfe gerne bei der Auswahl der richtigen Größe." },
         { "q": "Wie viel Übung wird erwartet?", "a": "5-8 Jahre: Einfach zum Spaß spielen! 9-12 Jahre: 10-15 Minuten täglich. 13-18 Jahre: 20-30 Minuten täglich. Aber keine Hausaufgaben — Üben soll sich wie Spielen anfühlen, nicht wie Pflicht." },
-        { "q": "Wie ist die Stornierungsregelung?", "a": "72+ Stunden vor der Stunde: kostenlose Stornierung. Weniger als 48 Stunden: 50% Gebühr. Weniger als 24 Stunden: volle Gebühr." },
+        { "q": "Wie ist die Stornierungsregelung?", "a": "Das Leben ist manchmal unplanbar — das verstehe ich. Sagst du mehr als 3 Tage vorher ab, entstehen keine Kosten. Innerhalb von 2 Tagen gilt eine Gebühr von 50%. Innerhalb von 24 Stunden wird die volle Stunde berechnet." },
         { "q": "Kann ich beim Unterricht dabei sein?", "a": "Für Kinder im Alter von 5-8 Jahren können Eltern die ersten 3 Stunden dabei sein. Danach nimmt das Kind alleine teil. Wir finden heraus, was am besten funktioniert." }
       ]
     },

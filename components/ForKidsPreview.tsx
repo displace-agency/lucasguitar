@@ -52,7 +52,7 @@ const ForKidsPreview: React.FC = () => {
             <div className="w-full max-w-full aspect-[16/9] md:max-w-[360px] md:aspect-[9/16] rounded-lg overflow-hidden">
                  <img
                     className="w-full h-full object-cover"
-                    src="/assets/portrait-headshot-blue-shirt-alt.avif"
+                    src="/assets/nailah-kids-lesson.jpg"
                     alt="Lucas Terhaar teaching guitar"
                     loading="lazy"
                  />

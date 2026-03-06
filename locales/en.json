@@ -24,7 +24,7 @@
   "about": {
     "label": "Meet Your Teacher",
     "heading": "I Believe Every Student Has a Unique Musical Voice",
-    "p1": "Hi, I'm Lucas — a guitar teacher based in Berlin with over 8 years of experience working with students of all ages. I started playing guitar when I was young, fell in love with jazz and improvisation, and eventually turned my passion into a career helping others discover theirs.",
+    "p1": "Hi, I'm Lucas — a guitar teacher based in Berlin with over 8 years of experience working with students of all ages. I fell in love with the guitar at a very young age, but only started playing and practicing as a teenager. After school, I studied Music Education and jazz guitar, played and recorded with a lot of different bands and musicians, and eventually turned my passion into a career helping others to discover theirs.",
     "p2": "Whether your child is picking up a guitar for the first time or you're an adult looking to finally learn that song you've always loved, I create lessons around what excites you. No rigid textbooks. No boring exercises. Just real music, real progress, and a lot of fun along the way.",
     "cta": "Book Free Meeting"
   },
@@ -161,7 +161,7 @@
         { "q": "How long are lessons?", "a": "Lessons are available in 30, 45, and 60 minutes. I recommend 30 or 45 minutes for most students. 60-minute sessions are also available on request." },
         { "q": "Does my child need their own guitar?", "a": "Not for the first lesson — I have instruments available. For regular lessons, I recommend getting a guitar. I can help you choose the right one for your child's age and size." },
         { "q": "How much practice is expected?", "a": "Ages 5-8: Just play for fun! Ages 9-12: 10-15 minutes daily. Ages 13-18: 20-30 minutes daily. Adults: whatever fits your schedule. Practice should feel like play, not a chore." },
-        { "q": "What's the cancellation policy?", "a": "72+ hours before your lesson: free cancellation. Less than 48 hours notice: 50% charge. Less than 24 hours notice: full charge." },
+        { "q": "What's the cancellation policy?", "a": "Life gets busy — I get it. Cancel more than 3 days ahead and there's no charge at all. Within 2 days, 50% of the lesson fee applies. Within 24 hours, the full fee is charged." },
         { "q": "Can parents sit in on lessons?", "a": "For children ages 5-8, parents may sit in for the first 3 lessons. After that, the child attends independently. We'll figure out what works." }
       ]
     },
@@ -193,14 +193,6 @@
     "tables": {
       "label": "Lesson Packages",
       "heading": "Simple, Transparent Pricing",
-      "trial": {
-        "title": "Trial Lesson",
-        "price": "Free",
-        "duration": "30 minutes",
-        "desc": "A no-pressure introduction to see if we're a good fit.",
-        "features": ["Meet Lucas", "Try your first exercises", "Discuss your goals", "No commitment"],
-        "cta": "Book Trial"
-      },
       "single": {
         "badge": "Most Popular",
         "title": "Single Lesson",
@@ -210,18 +202,26 @@
           { "amount": "50€", "per": "/ 60 min" }
         ],
         "desc": "Flexible, pay-as-you-go lessons with full personalization.",
-        "features": ["Personalized lesson plan", "Technique + theory + songs", "Practice guidance included", "Flexible scheduling"],
+        "features": ["Technique + theory + songs", "Practice guidance included", "Flexible scheduling"],
         "cta": "Book Free Meeting"
       },
-      "package": {
+      "pack12": {
         "badge": "Best Value",
-        "title": "10-Lesson Package",
-        "price": "Save 10-15%",
-        "duration": "45 or 60 min sessions",
+        "title": "12-Lesson Package",
+        "price": "Save 10%",
+        "duration": "30, 45 or 60 min sessions",
         "desc": "Commit to progress with a discounted package.",
-        "features": ["Everything in Single Lesson", "10-15% savings", "Priority scheduling", "Progress tracking"],
+        "features": ["Everything in Single Lesson", "10% savings", "Reserved weekly slot", "Personalized lesson plan"],
         "cta": "Book Free Meeting",
-        "savings": "Save up to 80€"
+        "validity": "Valid for 4 months"
+      },
+      "trial": {
+        "title": "Trial Lesson",
+        "price": "Free",
+        "duration": "30 minutes",
+        "desc": "A no-pressure introduction to see if we're a good fit.",
+        "features": ["Meet Lucas", "Try your first exercises", "Discuss your goals", "No commitment"],
+        "cta": "Book Trial"
       }
     },
     "comparison": {
@@ -244,8 +244,8 @@
       "items": [
         { "q": "What payment methods do you accept?", "a": "Bank transfer, PayPal, and cash. Payment is due before each lesson or at the start of a package." },
         { "q": "Can I switch between 45 and 60 minute lessons?", "a": "Absolutely. You can choose your session length each time you book. Many students start with 45 and move to 60 as they get more into it." },
-        { "q": "What happens if I need to cancel?", "a": "72+ hours before your lesson: free cancellation. Less than 48 hours notice: 50% charge. Less than 24 hours notice: full charge." },
-        { "q": "Do packages expire?", "a": "10-lesson packages are valid for 4 months from purchase. This gives you plenty of flexibility while maintaining momentum." },
+        { "q": "What happens if I need to cancel?", "a": "Life gets busy — I get it. Cancel more than 3 days ahead and there's no charge at all. Within 2 days, 50% of the lesson fee applies. Within 24 hours, the full fee is charged." },
+        { "q": "Do packages expire?", "a": "12-lesson packages are valid for 4 months from purchase. This gives you plenty of flexibility while maintaining momentum." },
         { "q": "Is the trial lesson really free?", "a": "Yes! It's a free, no-pressure get-to-know-each-other session. We'll talk about your goals and see if we're a good fit." },
         { "q": "Do you offer discounts for siblings?", "a": "Yes — if two or more siblings take lessons, I offer a 10% family discount on all sessions." }
       ]
@@ -298,7 +298,7 @@
       "step5": {
         "title": "What kind of music do you want to play?",
         "subtitle": "Select your favorites",
-        "genres": ["Rock", "Pop", "Blues", "Jazz", "Funk", "R&B", "Classical", "Fingerstyle", "Gypsy Jazz", "Improvisation", "Songwriting", "Not sure yet"]
+        "genres": ["Rock", "Pop", "Blues", "Jazz", "Funk", "R&B", "Classical", "Fingerstyle", "Improvisation", "Songwriting", "Not sure yet"]
       },
       "step6": {
         "title": "Almost there! A few final details.",
@@ -444,7 +444,7 @@
         { "q": "How long are lessons?", "a": "Lessons are available in 30, 45, and 60 minutes. I recommend 30 or 45 minutes for most students. 60-minute sessions are also available on request." },
         { "q": "Does my child need their own guitar?", "a": "Not for the first lesson — I have instruments available. For regular lessons, I recommend getting a guitar. I can help you choose the right one for your child's age and size." },
         { "q": "How much practice is expected?", "a": "Ages 5-8: Just play for fun! Ages 9-12: 10-15 minutes daily. Ages 13-18: 20-30 minutes daily. But there's no homework — practice should feel like play, not a chore." },
-        { "q": "What's the cancellation policy?", "a": "72+ hours before your lesson: free cancellation. Less than 48 hours notice: 50% charge. Less than 24 hours notice: full charge." },
+        { "q": "What's the cancellation policy?", "a": "Life gets busy — I get it. Cancel more than 3 days ahead and there's no charge at all. Within 2 days, 50% of the lesson fee applies. Within 24 hours, the full fee is charged." },
         { "q": "Can I sit in on lessons?", "a": "For children ages 5-8, parents may sit in for the first 3 lessons. After that, the child attends independently. We'll figure out what works." }
       ]
     },

@@ -72,10 +72,12 @@ const PricingTables = () => {
           <span className="font-sans text-[11px] font-bold uppercase tracking-[1.5px] text-brown mb-3 block">{tables.label}</span>
           <h2 className="font-serif text-[clamp(1.5rem,1.5rem+1.5vw,2.5rem)] leading-[1.2] text-warm-black">{tables.heading}</h2>
         </div>
-        <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-[clamp(16px,2vw,24px)]">
+
+        {/* Main 3 cards */}
+        <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[clamp(16px,2vw,24px)] mb-12">
 
           {/* Card 1: Trial */}
-          <div className="stagger-child col-span-1 md:col-span-4 bg-white border border-[#E8DFD3] rounded-xl p-8 text-center relative flex flex-col h-full">
+          <div className="stagger-child bg-white border border-[#E8DFD3] rounded-xl p-8 text-center relative flex flex-col h-full">
             <h3 className="font-serif text-[20px] text-warm-black mb-2">{tables.trial.title}</h3>
             <div className="mb-1">
               <span className="font-serif text-[clamp(2rem,3vw,3rem)] text-warm-black leading-none">{tables.trial.price}</span>
@@ -95,8 +97,8 @@ const PricingTables = () => {
             </Link>
           </div>
 
-          {/* Card 2: Single (Featured) */}
-          <div className="stagger-child col-span-1 md:col-span-4 bg-white border-2 border-brown rounded-xl p-8 text-center relative flex flex-col h-full shadow-offset-md order-first md:order-none">
+          {/* Card 2: Single Lesson (Featured) */}
+          <div className="stagger-child bg-white border-2 border-brown rounded-xl p-8 text-center relative flex flex-col h-full shadow-offset-md">
             <div className="absolute top-[-12px] left-1/2 -translate-x-1/2 bg-brown text-white font-sans text-[11px] font-bold uppercase tracking-wider py-1 px-3 rounded-full">
               {tables.single.badge}
             </div>
@@ -123,19 +125,19 @@ const PricingTables = () => {
             </Link>
           </div>
 
-          {/* Card 3: Package */}
-          <div className="stagger-child col-span-1 md:col-span-4 bg-white border border-[#E8DFD3] rounded-xl p-8 text-center relative flex flex-col h-full">
+          {/* Card 3: 12-Lesson Package */}
+          <div className="stagger-child bg-white border border-[#E8DFD3] rounded-xl p-8 text-center relative flex flex-col h-full">
             <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 bg-green text-white font-sans text-[11px] font-bold uppercase tracking-wider py-1 px-3 rounded-full">
-              {tables.package.badge}
+              {tables.pack12.badge}
             </div>
-            <h3 className="font-serif text-[20px] text-warm-black mb-2">{tables.package.title}</h3>
+            <h3 className="font-serif text-[20px] text-warm-black mb-2">{tables.pack12.title}</h3>
             <div className="mb-1">
-              <span className="font-serif text-[clamp(2rem,3vw,2.5rem)] text-warm-black leading-none">{tables.package.price}</span>
+              <span className="font-serif text-[clamp(2rem,3vw,2.5rem)] text-warm-black leading-none">{tables.pack12.price}</span>
             </div>
-            <p className="font-sans text-[14px] text-warm-gray mb-6">{tables.package.duration}</p>
-            <p className="font-sans text-[13px] text-warm-gray leading-[1.5] mb-8 min-h-[40px]">{tables.package.desc}</p>
+            <p className="font-sans text-[14px] text-warm-gray mb-6">{tables.pack12.duration}</p>
+            <p className="font-sans text-[13px] text-warm-gray leading-[1.5] mb-8 min-h-[40px]">{tables.pack12.desc}</p>
             <ul className="space-y-3 mb-8 flex-grow">
-              {tables.package.features.map((feat, i) => (
+              {tables.pack12.features.map((feat, i) => (
                 <li key={i} className="flex items-center justify-center gap-2">
                   <Check size={16} className="text-green shrink-0" />
                   <span className="font-sans text-[13px] text-warm-black">{feat}</span>
@@ -143,11 +145,12 @@ const PricingTables = () => {
               ))}
             </ul>
             <Link to="/contact" onClick={() => trackCTAClick('Book Package - Pricing', '/contact')}>
-              <Button variant="secondary" className="w-full">{tables.package.cta}</Button>
+              <Button variant="secondary" className="w-full">{tables.pack12.cta}</Button>
             </Link>
-            <p className="mt-4 font-sans text-[12px] font-medium text-green">{tables.package.savings}</p>
+            <p className="mt-4 font-sans text-[12px] text-warm-gray">{tables.pack12.validity}</p>
           </div>
         </div>
+
       </div>
     </section>
   );
