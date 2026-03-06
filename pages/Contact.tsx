@@ -114,43 +114,36 @@ const Contact: React.FC = () => {
     });
   };
 
-  const submitForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+
+  const submitForm = async () => {
     trackFormSubmit(formData.studentType || 'unknown');
-    // Form values stay in English for Lucas
-    console.log("Sending Email...");
-    console.log(`
-Subject: New Lesson Inquiry — ${formData.name} (${formData.studentType === 'child' ? 'Child' : 'Adult'}, ${formData.ageRange})
+    setIsSubmitting(true);
+    setSubmitError(false);
 
-New Guitar Lesson Inquiry
-━━━━━━━━━━━━━━━━━━━━━━━
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-Student Type: ${formData.studentType === 'child' ? 'For a Child' : 'Adult Learner'}
-Age Range: ${formData.ageRange}
-Experience: ${formData.experience}
-Instruments: ${formData.instruments.join(', ')}
-Genres: ${formData.genres.join(', ')}
-Availability: ${formData.availabilityDays.join(', ')} — ${formData.availabilityTime}
+      if (!response.ok) throw new Error('Send failed');
 
-━━━━━━━━━━━━━━━━━━━━━━━
-
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone || "Not provided"}
-
-Message:
-${formData.message || "No additional message"}
-
-━━━━━━━━━━━━━━━━━━━━━━━
-    `);
-
-    setAnimating(true);
-    setTimeout(() => {
+      setAnimating(true);
+      setTimeout(() => {
         setIsSuccess(true);
         setAnimating(false);
+        setIsSubmitting(false);
         if (wizardRef.current) {
-            wizardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          wizardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-    }, 800);
+      }, 800);
+    } catch (err) {
+      setIsSubmitting(false);
+      setSubmitError(true);
+    }
   };
 
   const canProceed = () => {
@@ -369,12 +362,19 @@ ${formData.message || "No additional message"}
       </div>
 
       <div className="mt-auto">
+        {submitError && (
+          <p className="text-[#B85525] font-sans text-[13px] text-center mb-3">Something went wrong. Please try again or contact Lucas directly.</p>
+        )}
         <button
           onClick={handleNext}
-          disabled={!canProceed()}
+          disabled={!canProceed() || isSubmitting}
           className="w-full bg-brown text-white disabled:bg-warm-mid disabled:cursor-not-allowed hover:bg-brown-hover font-medium transition-colors duration-200 ease-out rounded-md text-[13px] px-7 py-3.5 tracking-[0.3px] flex items-center justify-center gap-2"
         >
-          <Send size={16} /> {w.step6.submit}
+          {isSubmitting ? (
+            <><Clock size={16} className="animate-spin" /> Sending...</>
+          ) : (
+            <><Send size={16} /> {w.step6.submit}</>
+          )}
         </button>
       </div>
     </div>
