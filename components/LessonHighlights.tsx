@@ -11,7 +11,7 @@ const LessonCard: React.FC<LessonCardProps> = ({ title, description, image }) =>
   <Link to="/how-i-teach" className="stagger-child block group h-full">
     <div className="bg-white border border-warm-mid rounded-lg overflow-hidden transition-shadow duration-200 ease-out hover:shadow-offset-md h-full flex flex-col">
       <div className="h-[180px] w-full">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <img src={image} alt={title} loading="lazy" className="w-full h-full object-cover" />
       </div>
       <div className="p-5 flex-grow flex flex-col">
         <h3 className="font-serif text-[16px] text-warm-black mb-2">{title}</h3>

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Mail, Phone, MapPin, Check, ChevronLeft, ArrowRight, User, Users, Clock, Send, Music } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackWizardStep, trackFormSubmit, trackContactClick, trackCTAClick } from '../hooks/useTracking';
 
 // --- Types ---
 
@@ -74,6 +75,7 @@ const Contact: React.FC = () => {
       setAnimating(true);
       setTimeout(() => {
         setStep(prev => prev + 1);
+        trackWizardStep(step + 1, formData.studentType || 'unknown');
         setAnimating(false);
         if (window.innerWidth < 640 && wizardRef.current) {
              wizardRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -113,6 +115,7 @@ const Contact: React.FC = () => {
   };
 
   const submitForm = () => {
+    trackFormSubmit(formData.studentType || 'unknown');
     // Form values stay in English for Lucas
     console.log("Sending Email...");
     console.log(`
@@ -182,6 +185,7 @@ ${formData.message || "No additional message"}
               setAnimating(true);
               setTimeout(() => {
                 setStep(3);
+                trackWizardStep(3, 'adult');
                 setAnimating(false);
               }, 300);
             } else {
@@ -559,12 +563,12 @@ ${formData.message || "No additional message"}
             <div className="col-span-1 sm:col-span-4 lg:col-span-4 flex flex-col items-center text-center p-6 border-b sm:border-b-0 sm:border-r border-[#E8DFD3] last:border-0 lg:border-0">
               <Mail size={32} className="text-brown mb-3" strokeWidth={1.5} />
               <h3 className="font-sans text-[14px] font-semibold text-warm-black mb-1">{t('contact.info.emailLabel')}</h3>
-              <a href="mailto:hello@lucasterhaar.com" className="font-sans text-[14px] text-[#7A6E62] hover:text-brown underline underline-offset-4 transition-colors">hello@lucasterhaar.com</a>
+              <a href="mailto:hello@lucasterhaar.com" onClick={() => trackContactClick('email')} className="font-sans text-[14px] text-[#7A6E62] hover:text-brown underline underline-offset-4 transition-colors">hello@lucasterhaar.com</a>
             </div>
             <div className="col-span-1 sm:col-span-4 lg:col-span-4 flex flex-col items-center text-center p-6 border-b sm:border-b-0 sm:border-r border-[#E8DFD3] last:border-0 lg:border-0">
               <Phone size={32} className="text-brown mb-3" strokeWidth={1.5} />
               <h3 className="font-sans text-[14px] font-semibold text-warm-black mb-1">{t('contact.info.phoneLabel')}</h3>
-              <a href="tel:+491627362969" className="font-sans text-[14px] text-[#7A6E62] hover:text-brown underline underline-offset-4 transition-colors">+49 162 7362969</a>
+              <a href="tel:+491627362969" onClick={() => trackContactClick('phone')} className="font-sans text-[14px] text-[#7A6E62] hover:text-brown underline underline-offset-4 transition-colors">+49 162 7362969</a>
             </div>
             <div className="col-span-1 sm:col-span-4 lg:col-span-4 flex flex-col items-center text-center p-6">
               <MapPin size={32} className="text-brown mb-3" strokeWidth={1.5} />
@@ -602,6 +606,7 @@ ${formData.message || "No additional message"}
           <p className="font-sans text-[clamp(1rem,1rem+0.2vw,1.125rem)] text-white/75 mb-8">{t('contact.cta.desc')}</p>
           <button
               onClick={() => {
+                trackCTAClick('Start Booking - Contact CTA', '#wizard');
                 if (wizardRef.current) {
                    wizardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }

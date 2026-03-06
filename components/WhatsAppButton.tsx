@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackWhatsAppClick } from '../hooks/useTracking';
 
 interface WhatsAppButtonProps {
   isBannerVisible: boolean;
@@ -12,6 +13,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ isBannerVisible }) => {
       rel="noopener noreferrer"
       className={`whatsapp-float ${isBannerVisible ? 'banner-visible' : ''}`}
       aria-label="Chat with Lucas on WhatsApp"
+      onClick={() => trackWhatsAppClick('general')}
     >
       <span className="text-[20px] leading-none">🎸</span>
       <span className="whatsapp-label font-sans text-[13px] font-medium text-white">

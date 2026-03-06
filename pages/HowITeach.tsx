@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Compass, Music, Trophy, Play, Check, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 // Section 1: Hero
 const Hero = () => {
@@ -20,14 +21,14 @@ const Hero = () => {
           <p className="font-sans text-[clamp(1rem,1rem+0.2vw,1.125rem)] leading-[1.6] text-white/80 max-w-[480px] mb-8">
             {t('howITeach.hero.desc')}
           </p>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => trackCTAClick('Book Trial - How I Teach Hero', '/contact')}>
             <Button variant="secondary" className="bg-amber text-warm-black rounded-md">
               {t('howITeach.hero.cta')}
             </Button>
           </Link>
         </div>
         <div className="teach-hero-image col-span-4 lg:col-span-5 lg:col-start-8 order-1 lg:order-2 mb-6 lg:mb-0">
-          <img src="/assets/guitar-couch-burgundy-portrait.avif" alt="Teaching Method" className="w-full aspect-[3/4] object-cover rounded-xl shadow-offset-sm" />
+          <img src="/assets/guitar-couch-burgundy-portrait.avif" alt="Teaching Method" loading="lazy" className="w-full aspect-[3/4] object-cover rounded-xl shadow-offset-sm" />
         </div>
       </div>
     </section>
@@ -235,12 +236,12 @@ const PageCTA = () => {
          <h2 className="font-serif text-[clamp(1.5rem,1.5rem+1.5vw,2.5rem)] leading-[1.2] text-white mb-4">{t('howITeach.cta.heading')}</h2>
          <p className="font-sans text-[clamp(1rem,1rem+0.2vw,1.125rem)] text-white/75 max-w-[500px] mx-auto mb-8 leading-[1.6]">{t('howITeach.cta.desc')}</p>
          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-           <Link to="/contact" className="w-full sm:w-auto">
+           <Link to="/contact" className="w-full sm:w-auto" onClick={() => trackCTAClick('Book Trial - How I Teach CTA', '/contact')}>
               <button className="w-full sm:w-auto bg-amber text-warm-black hover:bg-[#D4941E] font-medium transition-all duration-200 ease-out rounded-md text-[13px] px-8 py-3.5 tracking-[0.3px] min-h-[44px]">
                 {t('howITeach.cta.cta')}
               </button>
            </Link>
-           <Link to="/pricing" className="w-full sm:w-auto">
+           <Link to="/pricing" className="w-full sm:w-auto" onClick={() => trackCTAClick('View Pricing - How I Teach CTA', '/pricing')}>
              <button className="w-full sm:w-auto bg-transparent border-2 border-white rounded-full px-8 py-[14px] text-white font-sans text-[13px] font-medium min-h-[44px] hover:bg-white hover:text-brown transition-all duration-200">
                 {t('howITeach.cta.viewPricing')}
              </button>

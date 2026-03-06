@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/Button';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +82,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop & Mobile CTA */}
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => trackCTAClick('Book Free - Nav', '/contact')}>
               <Button
                 variant="primary"
                 className="text-[11px] px-[14px] lg:text-[12px] lg:px-[20px] py-[10px] h-[44px] rounded-md"
@@ -134,7 +135,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        <Link to="/contact" onClick={() => setIsOpen(false)} className="w-full">
+        <Link to="/contact" onClick={() => { setIsOpen(false); trackCTAClick('Book Free - Nav Mobile', '/contact'); }} className="w-full">
           <Button variant="primary" className="w-full h-[48px] text-[13px]">
             {t('nav.bookFree')}
           </Button>

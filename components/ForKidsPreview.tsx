@@ -3,6 +3,7 @@ import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 const ForKidsPreview: React.FC = () => {
   const { t, dict } = useLanguage();
@@ -37,10 +38,10 @@ const ForKidsPreview: React.FC = () => {
           </ul>
 
           <div className="flex flex-wrap gap-4 items-center">
-            <Link to="/how-i-teach">
+            <Link to="/how-i-teach" onClick={() => trackCTAClick('Learn More - Kids Preview', '/how-i-teach')}>
               <Button variant="primary">{t('forKidsPreview.learnMore')}</Button>
             </Link>
-            <Link to="/pricing">
+            <Link to="/pricing" onClick={() => trackCTAClick('View Pricing - Kids Preview', '/pricing')}>
               <Button variant="ghost" className="px-0">{t('forKidsPreview.viewPricing')}</Button>
             </Link>
           </div>
@@ -53,6 +54,7 @@ const ForKidsPreview: React.FC = () => {
                     className="w-full h-full object-cover"
                     src="/assets/portrait-headshot-blue-shirt-alt.avif"
                     alt="Lucas Terhaar teaching guitar"
+                    loading="lazy"
                  />
             </div>
         </div>

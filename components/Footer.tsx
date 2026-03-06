@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Youtube, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackSocialClick, trackContactClick, trackWhatsAppClick } from '../hooks/useTracking';
 
 const Footer: React.FC = () => {
   const { t, dict } = useLanguage();
@@ -72,6 +73,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
+                    onClick={() => trackSocialClick('instagram', 'https://www.instagram.com/lucasterhaar_guitar/')}
                   >
                     <Instagram size={18} strokeWidth={1.5} /> {f.instagram}
                   </a>
@@ -82,12 +84,13 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
+                    onClick={() => trackSocialClick('youtube', 'https://www.youtube.com/@LucasTerhaar')}
                   >
                     <Youtube size={18} strokeWidth={1.5} /> {f.youtube}
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:hello@lucasterhaar.com" className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]">
+                  <a href="mailto:hello@lucasterhaar.com" className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]" onClick={() => trackContactClick('email')}>
                     <Mail size={18} strokeWidth={1.5} /> {f.email}
                   </a>
                 </li>
@@ -97,6 +100,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 font-sans text-[14px] text-warm-black hover:text-brown transition-colors leading-[2.2]"
+                    onClick={() => trackWhatsAppClick('footer')}
                    >
                      <span className="text-[16px] leading-none">💬</span> {f.whatsapp}
                    </a>
@@ -145,18 +149,18 @@ const Footer: React.FC = () => {
                 </h4>
                 <ul className="space-y-3">
                   <li>
-                    <a href="https://www.instagram.com/lucasterhaar_guitar/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black">
+                    <a href="https://www.instagram.com/lucasterhaar_guitar/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black" onClick={() => trackSocialClick('instagram', 'https://www.instagram.com/lucasterhaar_guitar/')}>
                       <Instagram size={18} /> {f.instagram}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/@LucasTerhaar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black">
+                    <a href="https://www.youtube.com/@LucasTerhaar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black" onClick={() => trackSocialClick('youtube', 'https://www.youtube.com/@LucasTerhaar')}>
                       <Youtube size={18} /> {f.youtube}
                     </a>
                   </li>
-                  <li><a href="mailto:hello@lucasterhaar.com" className="flex items-center gap-2 font-sans text-[14px] text-warm-black"><Mail size={18} /> {f.email}</a></li>
+                  <li><a href="mailto:hello@lucasterhaar.com" className="flex items-center gap-2 font-sans text-[14px] text-warm-black" onClick={() => trackContactClick('email')}><Mail size={18} /> {f.email}</a></li>
                   <li>
-                    <a href="https://wa.me/491627362969" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black">
+                    <a href="https://wa.me/491627362969" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-sans text-[14px] text-warm-black" onClick={() => trackWhatsAppClick('footer')}>
                       <span className="text-[16px] leading-none">💬</span> {f.whatsapp}
                     </a>
                   </li>

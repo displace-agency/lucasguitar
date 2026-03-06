@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCookieConsent } from '../hooks/useTracking';
+
+const gtag = (...args: any[]) => {
+  (window as any).dataLayer = (window as any).dataLayer || [];
+  (window as any).dataLayer.push(args);
+};
 
 interface CookieBannerProps {
   onVisibilityChange: (isVisible: boolean) => void;
@@ -19,12 +25,16 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ onVisibilityChange }) => {
   }, [onVisibilityChange]);
 
   const handleAccept = () => {
+    trackCookieConsent('accept');
+    gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
     localStorage.setItem('cookie-consent', 'accepted');
     setIsVisible(false);
     onVisibilityChange(false);
   };
 
   const handleDecline = () => {
+    trackCookieConsent('decline');
+    gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied' });
     localStorage.setItem('cookie-consent', 'declined');
     setIsVisible(false);
     onVisibilityChange(false);

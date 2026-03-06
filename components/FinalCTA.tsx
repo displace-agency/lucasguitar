@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 const FinalCTA: React.FC = () => {
   const { t } = useLanguage();
@@ -20,12 +21,12 @@ const FinalCTA: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" className="w-full sm:w-auto">
+          <Link to="/contact" className="w-full sm:w-auto" onClick={() => trackCTAClick('Book Free Trial - Final CTA', '/contact')}>
             <Button variant="primary" className="w-full sm:w-auto px-9 py-4 text-[14px]">
               {t('finalCTA.cta')}
             </Button>
           </Link>
-          <Link to="/pricing" className="w-full sm:w-auto">
+          <Link to="/pricing" className="w-full sm:w-auto" onClick={() => trackCTAClick('View Pricing - Final CTA', '/pricing')}>
              <Button variant="outline" className="w-full sm:w-auto px-7 py-[14px]">
                {t('finalCTA.viewPricing')}
              </Button>

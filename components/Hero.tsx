@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -48,12 +49,12 @@ const Hero: React.FC = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 items-center w-full sm:w-auto">
-          <Link to="/contact" className="w-full sm:w-auto">
+          <Link to="/contact" className="w-full sm:w-auto" onClick={() => trackCTAClick('Book Free Trial - Hero', '/contact')}>
              <button className="w-full sm:w-auto bg-brown border-2 border-transparent rounded-md px-8 py-4 text-white font-sans text-[14px] font-medium min-h-[48px] hover:bg-brown-hover transition-colors duration-200">
                 {t('hero.cta')}
              </button>
           </Link>
-          <Link to="/pricing" className="w-full sm:w-auto">
+          <Link to="/pricing" className="w-full sm:w-auto" onClick={() => trackCTAClick('View Pricing - Hero', '/pricing')}>
              <button className="w-full sm:w-auto bg-transparent border-2 border-white rounded-full px-7 py-[14px] text-white font-sans text-[13px] font-medium min-h-[48px] hover:bg-white hover:text-warm-black transition-all duration-200">
                 {t('hero.viewPricing')}
              </button>

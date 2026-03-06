@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 const AboutSection: React.FC = () => {
   const { t } = useLanguage();
@@ -14,6 +15,7 @@ const AboutSection: React.FC = () => {
           <img
             src="/assets/portrait-headshot-blue-shirt.avif"
             alt="Lucas Terhaar"
+            loading="lazy"
             className="w-full aspect-[3/4] object-cover rounded-lg"
           />
         </div>
@@ -30,7 +32,7 @@ const AboutSection: React.FC = () => {
             <p>{t('about.p1')}</p>
             <p>{t('about.p2')}</p>
           </div>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => trackCTAClick('Book Trial - About', '/contact')}>
             <Button variant="primary">
               {t('about.cta')}
             </Button>

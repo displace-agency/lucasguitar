@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackCTAClick } from '../hooks/useTracking';
 
 // --- Section 1: Hero ---
 const PricingHero = () => {
@@ -89,7 +90,7 @@ const PricingTables = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => trackCTAClick('Book Trial - Pricing', '/contact')}>
               <Button variant="outline" className="w-full">{tables.trial.cta}</Button>
             </Link>
           </div>
@@ -117,7 +118,7 @@ const PricingTables = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => trackCTAClick('Book Single - Pricing', '/contact')}>
               <Button variant="primary" className="w-full">{tables.single.cta}</Button>
             </Link>
           </div>
@@ -141,7 +142,7 @@ const PricingTables = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => trackCTAClick('Book Package - Pricing', '/contact')}>
               <Button variant="secondary" className="w-full">{tables.package.cta}</Button>
             </Link>
             <p className="mt-4 font-sans text-[12px] font-medium text-green">{tables.package.savings}</p>
@@ -240,7 +241,7 @@ const PricingCTA = () => {
       <div className="max-w-site mx-auto">
         <h2 className="font-serif text-[clamp(1.5rem,1.5rem+1.5vw,2.5rem)] leading-[1.2] text-white mb-4">{t('pricing.cta.heading')}</h2>
         <p className="font-sans text-[clamp(1rem,1rem+0.2vw,1.125rem)] text-white/75 max-w-[500px] mx-auto mb-8 leading-[1.6]">{t('pricing.cta.desc')}</p>
-        <Link to="/contact">
+        <Link to="/contact" onClick={() => trackCTAClick('Book Free Trial - Pricing CTA', '/contact')}>
           <button className="w-full sm:w-auto bg-amber text-warm-black hover:bg-[#D4941E] font-medium transition-all duration-200 ease-out rounded-md text-[13px] px-9 py-4 tracking-[0.3px] min-h-[44px]">
             {t('pricing.cta.cta')}
           </button>
